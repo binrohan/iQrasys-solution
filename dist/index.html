@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./vendors/slide/css/splide.min.css">
+    <link rel="stylesheet" href="./vendors/splide/css/splide.min.css">
     <script src="https://kit.fontawesome.com/acb1b62f9b.js" crossorigin="anonymous" async></script>
     <script src="./scripts/app.js" defer></script>
-    <script src="./vendors/slide/js/splide.min.js" defer></script>
-    <title>title</title>
+    <script src="./vendors/splide/js/splide.min.js" defer></script>
+    <script src="./scripts/style.js" defer></script>
+    <title>Superdrug</title>
 </head>
 <body>
     <nav>
@@ -17,15 +21,16 @@
             <a href="#" class="tips">
                 <img src="./assets/logo.png" alt="Superdrug logo">
             </a>
-            <ul class="flex flex--hor-center parent-height">
-                <li><span class="flag"><img src="./assets/flag-uk.svg" alt=""></span><span>United Kingdom</span></li>
+            <ul class="flex flex--ver-center parent-height">
+                <li><div class="flag"><img src="./assets/flag-uk.svg" alt=""></div><span>United Kingdom</span></li>
                 <li><i class="fas fa-map-marker"></i><span>Stores</span></li>
                 <li><i class="fas fa-user"></i><span>Login/Registration</span></li>
-                <li><span class="pos-relative"><i class="fas fa-shopping-cart"></i><span class="counter text--accent">0</span></span><span>My Basket &#163;0.00</span></li>
+                <li><div class="pos-relative"><i class="fas fa-shopping-cart"></i><span class="counter text--accent">0</span></div><span>My Basket &#163;0.00</span></li>
             </ul>
         </div>
         <div class="nav-mid container flex flex--space-between">
-            <ul class="flex flex--hor-center parent-height">
+            <ul class="flex flex--ver-center">
+                <li><img src="./assets/logo.png" alt="Superdrug logo"></li>
                 <li>Shop Category</li>
                 <li>Brands</li>
                 <li>Top Offers</li>
@@ -34,9 +39,17 @@
                 <li>Oh My Blog</li>
                 <li>Community</li>
             </ul>
-            <div id="search">
-                <input type="text" placeholder="I'm looking for">
-                <button>Search</button>
+            <div class="pos-relative">
+                <div class="search">
+                    <button class="button--hamburger"><i class="fas fa-bars"></i></button>
+                    <input type="text" placeholder="I'm looking for">
+                    <button class="button--search"><i class="fas fa-search"></i></button>
+                    <button class="button--cart pos-relative"><i class="fas fa-shopping-cart"></i><span class="counter text--accent">0</span></button>
+                </div>
+                <div class="cart-big">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="counter text--accent">0</span>
+                </div>
             </div>
         </div>
         <div class="nav-ribon">
@@ -104,6 +117,20 @@
                 </div>
             </div>
         </section>
+        <section class="mobile-category">
+            <div class="grid">
+                <div class="grid__item"> <a href="#">Cristma gift</a> </div>
+                <div class="grid__item"> <a href="#">Halloween</a> </div>
+                <div class="grid__item"> <a href="#">Make up</a> </div>
+                <div class="grid__item"> <a href="#">Fragrance</a> </div>
+                <div class="grid__item"> <a href="#">Skin</a> </div>
+                <div class="grid__item"> <a href="#">Hair</a> </div>
+                <div class="grid__item"> <a href="#">Toiletries</a> </div>
+                <div class="grid__item"> <a href="#">Top offer</a> </div>
+                <div class="grid__item"> <a href="#">Heath</a> </div>
+                <div class="grid__item"> <a href="#">Online Doctor</a> </div>
+            </div>
+        </section>
         <section class="poster">
             <div class="container">
                 <picture>
@@ -120,4 +147,68 @@
 
     </footer>
 </body>
+<div class="sidebar-overlay sidebar-overlay--hide">
+
+</div>
+<div class="sidebar">
+    <div class="sidebar__grid">
+        <div class="menu-header flex flex--ver-center flex--space-between"><p>Main Menu</p><i class="fas fa-check"></i></div>
+        <div class="close"><button class="button--close"><i class="fas fa-times"></i></button></div>
+        <div class="menu-items">
+            <div class="menu-items__block-one">
+                <div class="menu-items__block-one__item flex flex--ver-center flex--space-between">
+                    <p>Shop Categories</p>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="menu-items__block-one__item flex flex--ver-center flex--space-between">
+                    <p>Brands</p>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="menu-items__block-one__item flex flex--ver-center flex--space-between">
+                    <p>Top Offers</p>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="menu-items__block-one__item flex flex--ver-center flex--space-between">
+                    <p>Summer</p>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="menu-items__block-one__item flex flex--ver-center flex--space-between">
+                    <p>Services</p>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="menu-items__block-one__item flex flex--ver-center flex--space-between">
+                    <p>Oh My Blog!</p>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="menu-items__block-one__item flex flex--ver-center flex--space-between">
+                    <p>Community</p>
+                    <i class="fas fa-chevron-down"></i>
+                </div> 
+            </div>
+            <div class="menu-items__block-two">
+                <div class="menu-items__block-two__item flex flex--ver-center">
+                    <i class="fas fa-home"></i>
+                    <p>Home</p>
+                </div>
+                <div class="menu-items__block-two__item flex flex--ver-center">
+                    <i class="fas fa-user"></i>
+                    <p>Log in to my account</p>
+                </div>
+                <div class="menu-items__block-two__item flex flex--ver-center">
+                    <i class="fas fa-heart"></i>
+                    <p>Wishlist</p>
+                </div>
+                <div class="menu-items__block-two__item flex flex--ver-center">
+                    <i class="fas fa-map-marker"></i>
+                    <p>Store location</p>
+                </div>
+                <div class="menu-items__block-two__item flex flex--ver-center">
+                    <i class="fas fa-map"></i>
+                    <p>Sitemap</p>
+                </div>
+            </div>
+        </div>
+        <div class="blank"></div>
+    </div>
+</div>
 </html>
